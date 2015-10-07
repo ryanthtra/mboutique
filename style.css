@@ -11,6 +11,7 @@ a:hover
 
 div.page-wrapper
 {
+    overflow: hidden;
     width: 1000px;
     margin: 0 auto;
     font-family: arial, helvetica, sans-serif;
@@ -21,18 +22,14 @@ div.page-wrapper>div.header
     width: 100%;
     height: 72px;
     background-color: #fffabe;
+    position: relative;
+    z-index: 1000;
 }
 
 .logo-image
 {
     display: inline-block;
     margin: 19.5px 5%;
-}
-
-div.header
-{
-    position: relative;
-    z-index: 1000;
 }
 
 div.header nav
@@ -61,33 +58,48 @@ div.header nav
 
 div.footer
 {
-    position: relative;
     z-index: 1000;
     width: 1000px;
     height: 80px;
     background-color: rgb(223, 82, 119);
-    display: inline-flex;
+    /*display: inline-flex;*/
     color: white;
     font-size: 12px;
 }
 
-.footer div
+.footer>div
 {
-    width: 33.33%;
+    width: 100%;
+    height: 50%;
     text-align: center;
-    margin: 15px auto;
 }
 
-.footer div img, p
+.footer>div#f-top>div
+{
+    margin: 1.5% auto 0 auto;
+    display: inline-flex;
+    width: 30%;
+}
+
+.footer>div#f-top>div>a,
+.footer>div#f-top>div>div
+{
+    margin: 0 auto;
+    display: inline-flex;
+}
+
+.footer>div#f-top img,
+.footer>div#f-top p
 {
     display: inline-flex;
     margin: auto 7px;
 }
 
-#copyright
+.footer>div#f-bottom>p
 {
+    margin: auto;
+    padding-top: 1%;
     font-size: 11px;
-    margin-top: 10px;
 }
 
 .top-image
@@ -105,6 +117,7 @@ div.footer
 
 .midsection
 {
+    overflow: hidden;
     width: 100%;
     color: rgb(106, 105, 105);
 }
@@ -267,3 +280,170 @@ div.midsection>div#gp-party-section
 }
 
 /*END - styling for gift_parties.html*/
+
+/*styling for contact.html*/
+div.midsection h2
+{
+    margin-bottom: 40px;
+}
+
+div.midsection>div#cu-visit-us
+{
+    display: inline-block;
+    width: 33%;
+    float: left;
+    margin: 80px 0 80px 5%
+}
+
+div.midsection>div#cu-visit-us a
+{
+    color: #df5277;
+}
+
+div.midsection>div#cu-contact-form
+{
+    display: inline-block;
+    width: 33%;
+    float: left;
+    margin: 80px 0;
+}
+
+div.midsection>div#cu-contact-form textarea
+{
+    width: 310px;
+    height: 70px;
+    background-color: #f5f5f5;
+}
+
+div.midsection>div#cu-contact-form input[type="submit"]
+{
+    float: right;
+    width: 155px;
+    height: 35px;
+    background-color: #f5f5f5;
+    margin-right: 4%;
+    font-size: 14px;
+}
+div.midsection>img#cu-macarons-img
+{
+    display: inline-block;
+    float: right;
+    padding: 16% 7% 0 0;
+}
+/*END styling for contact.html*/
+
+/*START styling for mobile adaptive */
+@media screen and (max-device-width: 480px)
+{
+    /*START universal*/
+    div.page-wrapper
+    {
+        width: 100%;
+    }
+
+    div.header
+    {
+        height: 20vh;
+        text-align: center;
+    }
+
+    div.header>img.logo-image
+    {
+        margin: 1vh auto 0 auto;
+    }
+
+    div.header>nav
+    {
+        width: 100%;
+        font-size: .6em;
+        margin: 0 auto;
+    }
+
+    div.header>nav>ul>li
+    {
+        margin: auto 2.5% auto 2.5%;
+    }
+
+    .top-image
+    {
+        height: auto;
+    }
+
+    div.midsection
+    {
+        margin: auto 7.5%;
+    }
+
+    div.footer
+    {
+        width: 100%;
+        font-size: .7em;
+    }
+
+    .footer>div#f-top>div
+    {
+        margin: 1.5% 0% 0% 0%;
+        display: inline-flex;
+        width: 42%;
+    }
+
+    .footer>div#f-bottom>p
+    {
+        margin: auto;
+        padding-top: 4%;
+        font-size: 11px;
+    }
+
+    /*END universal*/
+
+    /*START contact.html*/
+    div.midsection h2
+    {
+        margin-bottom: 40px;
+    }
+
+    div.midsection p
+    {
+        line-height: 120%;
+    }
+
+    div.midsection>div#cu-visit-us
+    {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    div.midsection>div#cu-visit-us a
+    {
+        color: #df5277;
+    }
+
+    div.midsection>div#cu-contact-form
+    {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    div.midsection>div#cu-contact-form textarea
+    {
+        width: 90%;
+        height: 70px;
+        background-color: #f5f5f5;
+    }
+
+    div.midsection>div#cu-contact-form input[type="submit"]
+    {
+        float: right;
+        width: 40%;
+        height: 35px;
+        background-color: #f5f5f5;
+        margin-right: 8%;
+        font-size: 14px;
+    }
+    div.midsection>img#cu-macarons-img
+    {
+        display: none;
+    }
+    /*END contact.html*/
+}
+/*END styling for mobile adaptive*/
