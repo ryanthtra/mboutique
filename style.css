@@ -26,6 +26,21 @@ div.page-wrapper>div.header
     z-index: 1000;
 }
 
+.lang-flags
+{
+    position: absolute;
+    width: 4vw;
+    bottom: 3vw;
+    left: 62vw;
+}
+
+.lang-flags>img
+{
+    width: 40%;
+    float: left;
+    margin: 0 5%;
+}
+
 .logo-image
 {
     display: inline-block;
@@ -499,7 +514,7 @@ div.midsection>img#cu-macarons-img
     .flavor-day
     {
         width: 100%;
-        height: 8vh;
+        height: 20vw;
         margin: 2vh auto;
     }
     .flavor-day .flavor-day-top
@@ -518,7 +533,7 @@ div.midsection>img#cu-macarons-img
     }
     .flavor-day div>p
     {
-        display: inline-block;
+        /*display: inline-block;*/
         margin-left: 1vw;
     }
     .flavor-day .flavor-day-banner
