@@ -356,15 +356,30 @@ div.midsection>img#cu-macarons-img
         width: 100%;
     }
 
-    div.header
+    div.page-wrapper>div.header
     {
-        height: 20vh;
+        height: 13vh;
         text-align: center;
     }
 
     div.header>img.logo-image
     {
         margin: 1vh auto 0 auto;
+    }
+
+    .lang-flags
+    {
+        position: absolute;
+        width: 20vw;
+        bottom: 13vw;
+        left: 75vw;
+    }
+
+    .lang-flags>img
+    {
+        width: 40%;
+        float: left;
+        margin: 0 5%;
     }
 
     div.header>nav
