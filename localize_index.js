@@ -1,17 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
-    console.log("Building index.html");
-    buildGlobalStrings(current_language);
-    buildStringContent(current_language);
-
-    $('.lang-flags').on('click', 'img', function () {
-        var clicked_language = $(this).attr('language');
-        current_language = language[clicked_language];
-        buildGlobalStrings(current_language);
-        buildStringContent(current_language);
-    });
-});
-
-function buildStringContent(language) {
+﻿function buildStringContent(language) {
     // Welcome Info
     var welcome = $('#welcome-info').html('');
     welcome.append($('<h2>').text(language.welcome_info_welcome_header));
