@@ -263,6 +263,10 @@ var german_strings =
         contact_form_button: "SENDEN"
     };
 
+/**
+ * Dictionary (key/value array) that holds the language
+ *  objects.
+ */
 var language =
 {
     english: english_strings,
@@ -271,6 +275,11 @@ var language =
 
 var current_language = null;
 
+/**
+ * buildGlobalStrings - sets all the header and footer strings in the DOM to the
+ *  appropriate language
+ * @param language - an object (dictionary) containing all the strings for the language
+ */
 function buildGlobalStrings(language) {
     // Header
     var list_items = $('.header>nav>ul>li>a');
@@ -285,6 +294,10 @@ function buildGlobalStrings(language) {
     $('#f-bottom>p').text(language.footer_legal);
 }
 
+/**
+ * getStoredLanguage - basically a getter function that retrieves the 'savedLanguage'
+ *  key/value pair in the sessionStorage
+ */
 function getStoredLanguage()
 {
     if (typeof (Storage) !== "undefined") {
@@ -294,6 +307,11 @@ function getStoredLanguage()
         console.log("Local Storage not supported!");
     }
 }
+/**
+ * setStoredLanguage - basically a setter function that sets the 'savedLanguage' key
+ *  to the correct value
+ * @param language - a string that's actually the dictionary key for the 'language' dictionary
+ */
 function setStoredLanguage(language) {
     if (typeof (Storage) !== "undefined") {
         return (sessionStorage.setItem("savedLanguage", language));
@@ -305,12 +323,15 @@ function setStoredLanguage(language) {
 
 document.addEventListener("DOMContentLoaded", function () {
     current_language = language[getStoredLanguage()];
+
+    // If we haven't stored a language preference in the session storage, then just use English
     if (current_language === undefined)
         current_language = language.english;
 
     buildGlobalStrings(current_language);
-    buildStringContent(current_language);
+    buildStringContent(current_language);   // Function from the other 'localize_xxx.js' file for the page.
 
+    // Click-handler for the flag images in the header
     $('.lang-flags').on('click', 'img', function () {
         var clicked_language = $(this).attr('language');
         current_language = language[clicked_language];
