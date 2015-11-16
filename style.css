@@ -377,6 +377,7 @@ div.midsection>img#cu-macarons-img
     {
         position: absolute;
         width: 20vw;
+        height: 40%;
         top: 0vw;
         left: 75vw;
     }
@@ -392,7 +393,7 @@ div.midsection>img#cu-macarons-img
     {
         width: 100%;
         font-size: .6em;
-        margin: 0 auto;
+        margin: 3vw auto;
     }
 
     div.header>nav>ul>li
