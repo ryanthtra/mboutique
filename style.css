@@ -213,8 +213,9 @@ div.midsection ul>li
     margin: 0px;
 }
 
-.flavor-day-banner p
+div.flavor-day-banner>p
 {
+    font-size: 0.9vw;
     display: inline-flex;
 }
 
@@ -348,9 +349,14 @@ div.midsection>img#cu-macarons-img
 /*END styling for contact.html*/
 
 /*START styling for mobile adaptive */
-@media screen and (max-device-width: 800px)
+@media screen and (max-width: 800px)
 {
     /*START universal*/
+    a
+    {
+        font-size: 2.0vw;
+    }
+
     div.page-wrapper
     {
         width: 100%;
@@ -371,7 +377,7 @@ div.midsection>img#cu-macarons-img
     {
         position: absolute;
         width: 20vw;
-        bottom: 13vw;
+        top: 0vw;
         left: 75vw;
     }
 
@@ -425,17 +431,23 @@ div.midsection>img#cu-macarons-img
         font-size: 11px;
     }
 
+    div.midsection ul>li
+    {
+        font-size: 3.7vw;
+    }
     /*END universal*/
 
     /*START contact.html*/
     div.midsection h2
     {
         margin-bottom: 2vh;
+        font-size: 5.5vw;
     }
 
     div.midsection p
     {
         line-height: 120%;
+        font-size: 3.7vw;
     }
 
     div.midsection>div#cu-visit-us
@@ -532,12 +544,16 @@ div.midsection>img#cu-macarons-img
         height: 20vw;
         margin: 2vh auto;
     }
-    .flavor-day .flavor-day-top
+    div.flavor-day>div.flavor-day-top
     {
         height: 100%;
         width: 50%;
         display: inline-block;
         float: left;
+    }
+    div.flavor-day>div.flavor-day-top>p
+    {
+        font-size: 4.0vw;
     }
     .flavor-day .flavor-day-banners
     {
@@ -554,6 +570,10 @@ div.midsection>img#cu-macarons-img
     .flavor-day .flavor-day-banner
     {
         height: 50%;
+    }
+    div.flavor-day-banner>p
+    {
+        font-size: 4.0vw;
     }
     /*END index.html*/
 }
