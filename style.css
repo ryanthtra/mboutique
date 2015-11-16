@@ -391,9 +391,11 @@ div.midsection>img#cu-macarons-img
 
     div.header>nav
     {
+        position: relative;
+        bottom: 2vw;
         width: 100%;
         font-size: .6em;
-        margin: 3vw auto;
+        margin: -1vw auto;
     }
 
     div.header>nav>ul>li
@@ -460,6 +462,7 @@ div.midsection>img#cu-macarons-img
     div.midsection>div#cu-visit-us a
     {
         color: #df5277;
+        font-size: 3.7vw;
     }
 
     div.midsection>div#cu-contact-form
