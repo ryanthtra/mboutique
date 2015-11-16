@@ -348,7 +348,7 @@ div.midsection>img#cu-macarons-img
 /*END styling for contact.html*/
 
 /*START styling for mobile adaptive */
-@media screen and (max-device-width: 480px)
+@media screen and (max-width: 800px)
 {
     /*START universal*/
     div.page-wrapper
