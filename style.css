@@ -30,8 +30,8 @@ div.page-wrapper>div.header
 {
     position: absolute;
     width: 4vw;
-    bottom: 3vw;
-    left: 62vw;
+    /*bottom: 3vw;*/
+    /*left: 62vw;*/
 }
 
 .lang-flags>img
@@ -378,8 +378,8 @@ div.midsection>img#cu-macarons-img
         position: absolute;
         width: 20vw;
         height: 40%;
-        top: 0vw;
-        left: 75vw;
+        top: 13vh;
+        /*left: 75vw;*/
     }
 
     .lang-flags>img
