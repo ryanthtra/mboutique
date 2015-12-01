@@ -1,0 +1,1 @@
+<img class="notfound-image" src="assets/images/macawrong.jpg" alt="404 Image">

@@ -17,10 +17,10 @@ $header_stuff =
 	
 	'my_links'=>
 	[
-		'home'=>['url'=>'index.html', 'text'=>'Welcome'],
-		'macarons'=>['url'=>'macarons.html', 'text'=>'Our Macarons'],
-		'gifts'=>['url'=>'gifts.html', 'text'=>'Gifts & Parties'],
-		'contact'=>['url'=>'contact.html', 'text'=>'Contact']
+		'welcome'=>['url'=>'index.php?loadcontent=welcome', 'text'=>'Welcome'],
+		'our_macarons'=>['url'=>'index.php?loadcontent=our_macarons', 'text'=>'Our Macarons'],
+		'gifts_parties'=>['url'=>'index.php?loadcontent=gifts_parties', 'text'=>'Gifts & Parties'],
+		'contact'=>['url'=>'index.php?loadcontent=contact', 'text'=>'Contact']
 	]
 
 	
