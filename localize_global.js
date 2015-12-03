@@ -329,7 +329,11 @@ document.addEventListener("DOMContentLoaded", function () {
         current_language = language.english;
 
     buildGlobalStrings(current_language);
-    buildStringContent(current_language);   // Function from the other 'localize_xxx.js' file for the page.
+    var buildStringContent = window['buildStringContent_' + $('.midsection').attr('id')];
+    if (typeof buildStringContent === 'function')
+        buildStringContent(current_language);
+
+    //buildStringContent[$('.midsection').attr('id')](current_language);   // Function from the other 'localize_xxx.js' file for the page.
 
     // Click-handler for the flag images in the header
     $('.lang-flags').on('click', 'img', function () {
@@ -338,6 +342,8 @@ document.addEventListener("DOMContentLoaded", function () {
         setStoredLanguage(clicked_language);
 
         buildGlobalStrings(current_language);
-        buildStringContent(current_language);
+        if (typeof buildStringContent === 'function')
+            buildStringContent(current_language);
+        //buildStringContent[$('.midsection').attr('id')](current_language);
     });
 });

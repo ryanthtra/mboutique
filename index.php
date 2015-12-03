@@ -19,7 +19,7 @@
         <?
         include('header.php');
         ?>
-        <img class="logo-image" src="assets/images/<?echo $header_stuff['logo']['img_src'];?>">
+        <img class="logo-image" src="assets/images/<?php echo $header_stuff['logo']['img_src'];?>">
         <div class="lang-flags">
             <? addLanguageFlags($header_stuff['languages']); ?>
         </div>
@@ -64,5 +64,6 @@ function loadContent($content_name='', $links_arr)
         include_once($content_name . '.php');
     else
         include_once('macawrong.php');
+        
 }
 ?>

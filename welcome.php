@@ -1,6 +1,6 @@
 <img class="top-image" src="assets/images/welcome-image.png" alt="Welcome Image">
 
-<div class="midsection">
+<div class="midsection" id="welcome">
     <div id="welcome-content">
         <div id="macarons-img">
             <img src="assets/images/macarons-image.png" alt="Macaroons Image">

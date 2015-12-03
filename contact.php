@@ -1,6 +1,6 @@
 <img class="top-image" src="assets/images/contact-image.png" alt="Welcome Image">
 
-<div class="midsection">
+<div class="midsection" id="contact">
     <div id="cu-visit-us">
         <h2>Visit us!</h2>
         <p>Monday - Friday | 10am - 9pm</p>
@@ -22,13 +22,37 @@
         <?
         if ($_POST)
         {
-            validateForm($_POST);
+            if (validateForm($_POST))
+			{
+		?>
+		<div>
+			Thank you, <?echo trim($_POST['name']);?>.  We will contact you at  <?echo trim($_POST['email']);?> shortly.
+		</div>
+        <form action="index.php?loadcontent=contact#cu-contact-form" method="post">
+            <p>Name</p>
+            <input type="text" name="name">
+            <p>Email</p>
+            <input type="text" name="email">
+            <p>Phone</p>
+            <input type="text" name="phone">
+            <p>Subject</p>
+            <input type="text" name="subject">
+            <p>Message</p>
+            <textarea name="message" id="" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" value="SEND">
+        </form>
+		<?
+			}
+		?>
+
+		<?
         }
         else
         {
         ?>
         <h2>Contact Form</h2>
-        <form action="index.php?loadcontent=contact" method="post">
+        <form action="index.php?loadcontent=contact#cu-contact-form" method="post">
             <p>Name</p>
             <input type="text" name="name">
             <p>Email</p>
@@ -50,8 +74,14 @@
 </div>
 
 <?
+$error_array = 
+	[
+
+	];
 function validateForm($form_data)
 {
-    print_r($form_data);
+    //print_r($form_data);
+
+	return true;
 }
 ?>

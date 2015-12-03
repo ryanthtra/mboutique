@@ -1,6 +1,6 @@
 <img class="top-image" src="assets/images/our-macarons-image.png" alt="Welcome Image">
 
-<div class="midsection">
+<div class="midsection" id="our_macarons">
     <img id="macarons-bg" src="assets/images/our-macarons-background.png" alt="Our Macarons">
     <div id="our-macarons-section">
         <h2>Our macarons are freshly made by hand</h2>

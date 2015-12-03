@@ -1,7 +1,7 @@
 <img class="top-image" src="assets/images/gifts-parties-image.png" alt="Welcome Image">
 
 <!--START MIDSECTION-->
-<div class="midsection">
+<div class="midsection" id="gifts_parties">
     <img id="gift-parties-bg" src="assets/images/gifts-parties-background.png" alt="Gift Parties">
 
     <div id="gp-lets-eat-section">
